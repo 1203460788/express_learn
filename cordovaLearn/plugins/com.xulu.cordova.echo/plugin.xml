@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"  
+    id="com.xulu.cordova.echo"  
+    version="1.0.0">  
+    <name>Echo Plugin</name>  
+    <description>com.xulu.cordova.echo Description</description>  
+    <author>xulu</author>  
+    <license>Apache 2.0 License</license>  
+    <engines>  
+        <engine name="cordova" version=">=3.0.0" />  
+    </engines>  
+    <js-module src="www/Echo.js" name="Echo">
+        <clobbers target="navigator.Echo" />
+    </js-module>  
+    <platform name="android">
+        <source-file src="src/android/Echo.java" target-dir="src/com/xulu/cordova/myEcho" /> 
+        <config-file target="res/xml/config.xml" parent="/*">  
+             
+            <feature name="Echo">
+                <param name="android-package" value="com.xulu.cordova.myEcho.Echo"/>       
+            </feature>
+ 
+        </config-file>  
+    </platform>  
+
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="ios-package" value="CDVEcho" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVEcho.h" />
+        <source-file src="src/ios/CDVEcho.m" />
+    </platform>
+</plugin>

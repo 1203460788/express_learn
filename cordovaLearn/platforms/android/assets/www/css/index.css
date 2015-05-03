@@ -1,0 +1,37 @@
+html,body{
+	width: 100%;
+	height: 100px;
+}
+body{
+	overflow-x: hidden;
+	margin: 0;
+	padding:0;
+}
+#list{
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+	width: 100%;
+	overflow: hidden;
+}
+#list li{
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: block;
+	border: 1px solid rgb(255, 150, 48);
+	margin: -1px;
+	position: relative;
+	padding-left: 20px;
+}
+.tipSpan{
+	display: inline-block;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	border: 1px solid rgba(255,150,48);
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+	line-height: 20px;
+}

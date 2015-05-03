@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"  
+    id="com.korewang.cordova.Toast"  
+    version="1.0.0">  
+    <name>ToastPlugin</name>  
+    <description>com.korewang.cordova.Toast Description</description>  
+    <author>korewang</author>  
+    <license>Apache 2.0 License</license>  
+    <engines>  
+        <engine name="cordova" version=">=3.0.0" />  
+    </engines>  
+    <js-module src="www/myToast.js" name="myToast">  <!--js module  path  address-->
+        <clobbers target="navigator.toast" />  <!--plugin   clobbers address   target  is  module  main fn-->
+    </js-module>  
+    <platform name="android">  
+        <source-file src="src/android/myToast.java" target-dir="src/com/korewang/cordova/Toast" /><!-- java file  address--> 
+        <config-file target="res/xml/config.xml" parent="/*">  
+             
+            <feature name="webToast">  <!-- name is-->
+                <param name="android-package" value="com.korewang.cordova.Toast.myToast"/>   <!--java file  address-->       
+            </feature>
+ 
+        </config-file>  
+        <config-file target="AndroidManifest.xml" parent="/*">  
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />  
+        </config-file>  
+    </platform>  
+</plugin>
