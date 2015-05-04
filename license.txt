@@ -1,7 +1,1 @@
 this is a license this is a test 
-<<<<<<< HEAD
-changed agian
-hello test
-=======
-changed agian and again
->>>>>>> 73ee4592e2fd3544981dca3100e453ce6cd95e59
